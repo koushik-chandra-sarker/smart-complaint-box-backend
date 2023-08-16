@@ -82,16 +82,9 @@ class Subject(models.Model):
 
 class ComplaintStatus(models.TextChoices):
     PENDING = 'pending', _('Pending')
-    UNDER_REVIEW = 'under_review', _('Under Review')
     IN_PROGRESS = 'in_progress', _('In Progress')
-    ESCALATED = 'escalated', _('Escalated')
-    ON_HOLD = 'on_hold', _('On Hold')
-    RESOLVED = 'resolved', _('Resolved')
-    PARTIALLY_RESOLVED = 'partially_resolved', _('Partially Resolved')
+    SOLVED = 'solved', _('Solved')
     REJECTED = 'rejected', _('Rejected')
-    CLOSED = 'closed', _('Closed')
-    ONGOING = 'ongoing', _('Ongoing')
-    FEEDBACK_PROVIDED = 'feedback_provided', _('Feedback Provided')
 
 
 class Complaint(models.Model):
