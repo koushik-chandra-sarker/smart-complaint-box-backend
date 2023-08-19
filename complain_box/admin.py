@@ -52,7 +52,7 @@ class ComplaintAdmin(admin.ModelAdmin):
         'id', 'title', 'complained_to', 'complainant_name', 'complainant_phone', 'complainant_email', 'status',
         'created_at', 'updated_at')
     search_fields = ('title', 'complainant_name', 'complainant_phone', 'complainant_email')
-    list_filter = ('status', 'institute', 'complained_to', 'complainant_type', 'student_class', 'subject')
+    list_filter = ('status', 'complained_to', 'complainant_type', 'student_class', 'subject')
     # raw_id_fields = ('complainant_type', )
     readonly_fields = ('id',)
 

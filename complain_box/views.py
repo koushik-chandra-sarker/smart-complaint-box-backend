@@ -146,7 +146,7 @@ class FeedbackByComplaintViewSet(viewsets.ReadOnlyModelViewSet):
 
 
 class SendSmsView(APIView):
-    permission_classes = [IsAuthenticated]
+    # permission_classes = [IsAuthenticated]
 
     def post(self, request, *args, **kwargs):
         serializer = SmsSerializer(data=request.data)

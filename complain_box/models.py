@@ -106,10 +106,12 @@ class Complaint(models.Model):
                                       help_text="Select the designation of the person the complaint is addressed to.")
     complainant_type = models.ForeignKey(ComplainantType, on_delete=models.CASCADE, null=True, blank=True,
                                          help_text="Select the type of complainant.")
+    complainant_type_alt = models.CharField(max_length=250, null=True, blank=True)
     student_class = models.ForeignKey(Class, on_delete=models.CASCADE, null=True, blank=True,
                                       help_text="Select the class of the student involved.")
     subject = models.ForeignKey(Subject, on_delete=models.CASCADE, null=True, blank=True,
                                 help_text="Select the subject or topic of the complaint.")
+    subject_alt = models.CharField(max_length=250, null=True, blank=True)
     file = models.ForeignKey(File, null=True, blank=True, on_delete=models.CASCADE)
     status = models.CharField(max_length=20, choices=ComplaintStatus.choices, default=ComplaintStatus.PENDING)
     created_at = models.DateTimeField(auto_now_add=True)
